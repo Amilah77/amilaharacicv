@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <title>Amila Haračić</title>
+    <title>Amila Haračić</title>
+    <style>
+        /* stil za sakrivanje i prikazivanje */
+        .sakriveno {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <br>
+    <img src="amila.JPG" alt="Amila Haračić" width="200" height="200">
+    <br>
+    <br>
+            <h1>Amila Haračić</h1>
+    <p>Dobrodošli na moju web stranicu!</p>
+
+    <form>
+        <label for="padajuca_lista"></label>
+        <select id="padajuca_lista" onchange="prikaziTekst()">
+            <option value="">O meni</option>
+            <option value="ličneinformacije">Lične informacije</option>
+            <option value="vještine">Vještine</option>
+            <option value="edukacija">Edukacija</option>
+            <option value="iskustvo">Radno iskustvo</option>
+            <option value="kontakt">Kontakt</option>
+            
+
+        </select>
+    </form>
+
+    <div id="tekst_ličneinformacije" class="sakriveno">
+        
+            <ul>
+                <li>Posjedujem komunikacijske i organizacijske vještine stečene na prethodnim radnim mjestima. Spremna da radim individualno kao i u timu.<br> Sposobna za rad pod pritiskom, vrijedna i predana učenju, proučavanju i izvršavanju novih izazova.</li>
+
+            </ul>
+
+    </div>
+
+    <div id="tekst_kontakt" class="sakriveno">
+    
+    <ul>
+        <li>+38763572072</li>
+        <li><i class="fa-regular fa-envelope"></i>amilah77@icloud.com</li>
+        <li>Džemala Bijedića 58; Sarajevo</li>
+    </ul>
+</div>
+
+
+    <div id="tekst_vještine" class="sakriveno">
+    
+    <ul>
+        <li>Odlično poznavanje engleskog jezika</li>
+        <li>Odlično poznavanje MS Office paketa.</li>
+        <li>Samomotivacija</li>
+        <li>Sposobnost vođenja tima.</li>
+        <li>Odlična komunikacija sa klijentima i radnim kolegama.</li>
+        <li>Sposobnost prilagođavanja promjenama</li>
+        <li>Osobni razvoj</li>
+    </ul>
+</div>
+    
+    <div id="tekst_edukacija" class="sakriveno">
+        
+        <ul>
+            <li>JU Treća Gimnazija, Sarajevo</li>
+            <li>Fakultet za Saobraćaj i Komunikacije, Univerziteta u Sarajevu(apsolvent)</li>
+        </ul>
+    </div>
+
+    <div id="tekst_iskustvo" class="sakriveno">
+        
+        <h4>HYPO ALPE ADRIA BANK, SARAJEVO</h4>  
+    <h5>Služba za naplatu, 2012-2014</h5>
+  <ul>
+    <li>Rješavanje problema i odgovaranje na upite</li>
+        <li>Rad na računaru, upravljanje softverom, bazom podataka kao i unošenje podataka i informacija u isti</li>
+        <li>Zakazivanje termina sastanaka za potencijalne klijente</li>
+  </ul>      
+    
+  <h4> UNIQA OSIGURANJE, SARAJEVO</h4>
+  <h5>Call Center Agent, 2014-2016</h5>
+    <ul>
+        <li>Prodaja osiguranja</li>
+        <li>Dolazni i odlazni pozivi</li>
+        <li>Prodaja proizvoda i usluga</li>
+        <li>Služba za korisnike</li>
+        <li>Rješavanje problema klijenata</li>
+        <li>Rad na računaru, upravljanje softverom, bazom podataka</li>
+    </ul>
+  
+    <h4>UGOSTITELJ - ASISTENT MENDAŽERA</h4>
+    <h5>2016-2023</h5>
+    <ul>
+        <li>Caffe bar "Sova"</li>
+        <li>Tarčin Forest Resort and Spa, MGallery by Sofitel(FO,F&B)</li>
+        <li>Spazio Gourmet</li>
+        <li>Metropolis</li>
+        <li>Hotel "Priščapac", Korčula</li>
+        <li>Caffe bar "Izlog"</li>
+
+</ul>
+    </div>
+
+    <script>
+        function prikaziTekst() {
+            // dohvaćamo vrijednost odabrane opcije
+            var odabrano = document.getElementById("padajuca_lista").value;
+
+            // sakrijemo sve tekstove
+            var tekstovi = document.querySelectorAll(".sakriveno");
+            for (var i = 0; i < tekstovi.length; i++) {
+                tekstovi[i].style.display = "none";
+            }
+
+            // prikažemo samo odabrani tekst
+            var prikazi = document.getElementById("tekst_" + odabrano);
+            if (prikazi) {
+                prikazi.style.display = "block";
+            }
+
+    
+}
+        
+    
+
+</script>
+<!-- <header> -->
+    <!-- <h1>Amila Haračić</h1></header>
+    <form>
+
+    <select id="padajucaLista" onchange="showValue()">
+        <option value="Edukacija">Odaberite opciju</option>
+        <option value="Tekst vezan za edukaciju" id="edukacija">Edukacija</option>
+        <option value="Tekst vezan za radno iskustvo" id="radnoIskustvo">Radno iskustvo</option>
+    </select>
+</form>
+
+<div id="tekst"></div>
+
+<script>
+    function showValue() {
+        var select = document.getElementById("padajucaLista");
+        var selectedOption = select.options[select.selectedIndex];
+        var selectedValue = selectedOption.value;
+        var tekstDiv = document.getElementById("tekst");
+
+        if (selectedValue == "") {
+            tekstDiv.innerHTML = """;
+        } else if (selectedOption.id == "edukacija") {
+            tekstDiv.innerHTML = "zavrsila";
+        } else if (selectedOption.id == "radnoIskustvo") {
+            tekstDiv.innerHTML = "Tekst vezan za radno iskustvo";
+        }
+    }
+</script> -->
+           
+        <!-- <input type="text" class="cv-input">
+        <button class="cv-button">
+            <i class="fas fa-plus-square"></i>
+               
+        </button>
+    </form>
+    <div class="cv-container">
+        <ul class="cv"></ul>
+    </div> -->
+    <script src="./app.js"></script>
+
+    <!-- <h1 >EDUKACIJA</h1>
+    <ul>
+        <li>JU Treća Gimnazija, Sarajevo</li>
+        <li>Fakultet za Saobraćaj i Komunikacije, Univerziteta u Sarajevu(apsolvent)</li>
+
+    </ul>
+    <h1>RADNO ISKUSTVO</h1>
+    
+    <h4>HYPO ALPE ADRIA BANK, SARAJEVO</h4>  
+    <h5>Služba za naplatu, 2012-2014</h5>
+  <ul>
+    <li>Rješavanje problema i odgovaranje na upite</li>
+        <li>Rad na računaru, upravljanje softverom, bazom podataka kao i unošenje podataka i informacija u isti</li>
+        <li>Zakazivanje termina sastanaka za potencijalne klijente</li>
+  </ul>      
+    
+  <h4> UNIQA OSIGURANJE, SARAJEVO</h4>
+  <h5>Call Center Agent, 2014-2016</h5>
+    <ul>
+        <li>Prodaja osiguranja</li>
+        <li>Dolazni i odlazni pozivi</li>
+        <li>Prodaja proizvoda i usluga</li>
+        <li>Služba za korisnike</li>
+        <li>Rješavanje problema klijenata</li>
+        <li>Rad na računaru, upravljanje softverom, bazom podataka</li>
+    </ul>
+  
+    <h4>UGOSTITELJ - ASISTENT MENDAŽERA</h4>
+    <h5>2016-2023</h5>
+    <ul>
+        <li>Caffe bar "Sova"</li>
+        <li>Tarčin Forest Resort and Spa, MGallery by Sofitel(FO,F&B)</li>
+        <li>Spazio Gourmet</li>
+        <li>Metropolis</li>
+        <li>Hotel "Priščapac", Korčula</li>
+        <li>Caffe bar "Izlog"</li>
+
+</ul> -->
+</body>
+</html>
